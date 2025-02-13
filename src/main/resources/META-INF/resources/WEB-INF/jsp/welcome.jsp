@@ -2,10 +2,11 @@
 	<head>
 		<title>Welcome Page</title>
 	</head>
-	<body>
-		<div>Welcome to the Welcome PAGE!</div>
-        <div>Name: ${name}</div>
-        <div><a href="list-todos">Manage your TODOs</a></div>
-
+	<body class="container">
+		<div>
+			<h1>Welcome to the Welcome PAGE!</h1>
+			<p>Name: ${name}</p>
+			<a href="list-todos" class="btn btn-success">Manage your TODOs</a>
+		</div>
 	</body>
 </html>

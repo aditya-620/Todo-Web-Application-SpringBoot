@@ -2,6 +2,8 @@ package com.adityarastogi.springboot.Todo_Web_Application_SpringBoot.todo;
 
 import java.time.LocalDate;
 
+import jakarta.validation.constraints.Size;
+
 
 //Database (MySQL) 
 //Static List of todos => Database (H2, MySQL)
@@ -26,6 +28,9 @@ public class Todo {
 
 	private int id;
 	private String username;
+
+	//it is a validation annotation, which will validate the description field, and will throw an error if the description is less than 10 characters
+	@Size(min=10, message="Enter atleast 10 Characters...")
 	private String description;
 	private LocalDate targetDate;
 	private boolean done;
