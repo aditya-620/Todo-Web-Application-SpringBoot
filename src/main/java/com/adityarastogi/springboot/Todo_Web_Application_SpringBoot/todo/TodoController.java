@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 
-@Controller
+// @Controller
 @SessionAttributes("name")
 public class TodoController {
 

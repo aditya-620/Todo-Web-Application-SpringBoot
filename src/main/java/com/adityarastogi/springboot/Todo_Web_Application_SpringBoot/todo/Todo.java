@@ -2,6 +2,9 @@ package com.adityarastogi.springboot.Todo_Web_Application_SpringBoot.todo;
 
 import java.time.LocalDate;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 import jakarta.validation.constraints.Size;
 
 
@@ -12,6 +15,8 @@ import jakarta.validation.constraints.Size;
 // Bean -> Database Table
 
 //this is a todo bean
+//entity is used to map the bean to the database table
+@Entity
 public class Todo {
     public Todo() {
 		
@@ -26,7 +31,10 @@ public class Todo {
 		this.done = done;
 	}
 
+	@Id
+	@GeneratedValue 	
 	private int id;
+	
 	private String username;
 
 	//it is a validation annotation, which will validate the description field, and will throw an error if the description is less than 10 characters
